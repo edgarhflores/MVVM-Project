@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="MVVMProject.Views.UserDeviceInfoView"
+    Title="{Binding Title}">
+    <ContentPage.Content>
+        <StackLayout Orientation="Vertical" Padding="30,24,30,24" Spacing="10">
+            <Label Text="Device Analytics" FontSize="Title"></Label>
+            <Picker Title="Select a Category" SelectedItem="{Binding SelectedItem}">
+                <Picker.Items>
+                    <x:String>Connectivity</x:String>
+                    <x:String>Device Info</x:String>
+                    <x:String>Display Info</x:String>
+                </Picker.Items>
+            </Picker>
+            <Button Text="Show Analysis" Command="{Binding OpenCommand}"></Button>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
