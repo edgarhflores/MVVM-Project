@@ -5,8 +5,8 @@
     x:Class="MVVMProject.Views.UserDeviceInfoView"
     Title="{Binding Title}">
     <ContentPage.Content>
-        <StackLayout Orientation="Vertical" Padding="30,24,30,24" Spacing="10">
-            <Label Text="Device Analytics" FontSize="Title"></Label>
+        <StackLayout Orientation="Vertical" VerticalOptions="Center" Padding="30,24,30,24" Spacing="25">
+            <Label Text="Device Analytics" HorizontalOptions="Center" FontSize="Title"></Label>
             <Picker Title="Select a Category" SelectedItem="{Binding SelectedItem}">
                 <Picker.Items>
                     <x:String>Connectivity</x:String>

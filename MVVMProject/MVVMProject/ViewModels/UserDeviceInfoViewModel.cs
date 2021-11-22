@@ -6,14 +6,13 @@ namespace MVVMProject.ViewModels
 {
     public class UserDeviceInfoViewModel: BaseViewModel
     {
-        public Command OpenCommand { get; }
-
         public UserDeviceInfoViewModel()
         {
            Title = "Info";
            OpenCommand = new Command(OnOpen);
         }
 
+        public Command OpenCommand { get; }
         private string _selectedItem;
 
         public string SelectedItem
@@ -27,6 +26,10 @@ namespace MVVMProject.ViewModels
 
         private async void OnOpen()
         {
+            if (SelectedItem == null)
+            {
+                SelectedItem = "Please Go Back and Select a Category to View";
+            }
             var route = $"{nameof(ModalView)}?SelectedItem={SelectedItem}";
             await Shell.Current.GoToAsync(route);
         }

@@ -8,16 +8,19 @@ namespace MVVMProject.ViewModels
     [QueryProperty(nameof(SelectedItem), nameof(SelectedItem))]
     public class ModalViewModel: BaseViewModel
     {
-
-        public Command CloseCommand { get; }
-
         public ModalViewModel()
         {
             CloseCommand = new Command(OnClose);
         }
 
+        public Command CloseCommand { get; }
         private string _selectedItem;
         private string _deviceMeterics;
+
+        private async void OnClose()
+        {
+            await Shell.Current.GoToAsync("..");
+        }
 
         public string SelectedItem
         {
@@ -38,11 +41,6 @@ namespace MVVMProject.ViewModels
                 _deviceMeterics = value;
                 OnPropertyChanged("DeviceMeterics");
             }
-        }
-
-        private async void OnClose()
-        {
-            await Shell.Current.GoToAsync("..");
         }
 
         private void SetDeviceMeterics(string value)

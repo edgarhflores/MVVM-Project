@@ -5,7 +5,7 @@
     Shell.PresentationMode="Modal"
     x:Class="MVVMProject.Views.ModalView">
     <ContentPage.Content>
-        <StackLayout Spacing="10" VerticalOptions="CenterAndExpand">
+        <StackLayout Orientation="Vertical" VerticalOptions="Center" Padding="30,24,30,24" Spacing="25">
             <Label Text="{Binding SelectedItem}" FontSize="Title"></Label>
             <Label Text="{Binding DeviceMeterics}"></Label>
             <Button Text="Dismiss" Command="{Binding CloseCommand}" > </Button>

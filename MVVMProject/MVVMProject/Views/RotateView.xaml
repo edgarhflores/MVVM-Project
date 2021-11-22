@@ -2,14 +2,15 @@
 <ContentPage
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    xmlns:vm="clr-namespace:MVVMProject.ViewModels"
     x:Class="MVVMProject.Views.RotateView"
     Title="{Binding Title}">
 
-    <StackLayout Orientation="Vertical" Padding="30,24,30,24" Spacing="10">
-        <Label Text="{Binding RotatingText}" Rotation="{Binding RotationValue}"
-               HorizontalOptions="Center" VerticalOptions="Center" FontSize="Title"/>
+    <StackLayout Orientation="Vertical"  Padding="30,24,30,24" Spacing="10">
+        <Label Text="Text to Rotate" FontSize="Large"></Label>
         <Entry x:Name="entry" Text="{Binding RotatingText}" Placeholder="Enter Text to Rotate"/>
         <Slider Maximum="360" Value="{Binding RotationValue}" IsEnabled="{Binding IsEnabled}"/>
+        <Label Text="Text:" FontSize="Large" Padding="0,80,0,0"></Label>
+        <Label Text="{Binding RotatingText}" Rotation="{Binding RotationValue}"
+            HorizontalOptions="Center" VerticalOptions="Center" FontSize="Title" Padding="0,20,0,0"/>
     </StackLayout>
 </ContentPage>

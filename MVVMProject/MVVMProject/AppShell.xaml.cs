@@ -13,6 +13,5 @@ namespace MVVMProject
             InitializeComponent();
             Routing.RegisterRoute(nameof(ModalView), typeof(ModalView));
         }
-
     }
 }
