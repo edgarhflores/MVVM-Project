@@ -1,5 +1,4 @@
-﻿using System;
-using MVVMProject.Views;
+﻿using MVVMProject.Views;
 using Xamarin.Forms;
 
 namespace MVVMProject.ViewModels
