@@ -1,6 +1,4 @@
-﻿using System;
-using System.Diagnostics;
-using MVVMProject.Interfaces;
+﻿using MVVMProject.Interfaces;
 using Xamarin.Essentials;
 using Xamarin.Forms;
 
