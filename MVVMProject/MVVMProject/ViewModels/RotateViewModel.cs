@@ -12,10 +12,12 @@ namespace MVVMProject.ViewModels
 
         public RotateViewModel()
         {
+            _messageService = DependencyService.Get<IMessageService>();
+
             Title = "Rotate";
+
             if (VersionTracking.IsFirstLaunchEver)
             {
-                _messageService = DependencyService.Get<IMessageService>();
                 _messageService.ShowAsync("Welcome TubeBuddy Interviewer", "This app was created by Edgar Flores using MVVM architecture!", "Hire Edgar :)");
             }
         }
