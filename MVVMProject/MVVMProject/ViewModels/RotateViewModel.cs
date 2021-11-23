@@ -13,6 +13,7 @@ namespace MVVMProject.ViewModels
             _messageService = DependencyService.Get<IMessageService>();
 
             Title = "Rotate";
+            IsEnabled = false;
 
             if (VersionTracking.IsFirstLaunchEver)
             {
