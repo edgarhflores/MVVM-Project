@@ -31,8 +31,8 @@ namespace MVVMProject.ViewModels
             {
                 _rotatingText = value;
                 OnPropertyChanged("RotatingText");
+                //Anytime the entry text is empty then the slider is disabled and set to 0
                 SetIsEnabled(value);
-
                 if (value.Length == 0)
                     RotationValue = 0;
             }
