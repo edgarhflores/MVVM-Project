@@ -13,6 +13,7 @@ namespace MVVMProject.ViewModels
             _messageService = DependencyService.Get<IMessageService>();
 
             Title = "Rotate";
+            IsEnabled = false;
 
             if (VersionTracking.IsFirstLaunchEver)
             {
@@ -31,8 +32,9 @@ namespace MVVMProject.ViewModels
             {
                 _rotatingText = value;
                 OnPropertyChanged("RotatingText");
-                //Anytime the entry text is empty then the slider is disabled and set to 0
+                // Check to enable/disable silder
                 SetIsEnabled(value);
+                // When Entry text is empty then the slider value and text rotation is set to 0
                 if (value.Length == 0)
                     RotationValue = 0;
             }

@@ -4,16 +4,16 @@ using Xamarin.Forms.Xaml;
 using MVVMProject.Services;
 using MVVMProject.Views;
 using Xamarin.Essentials;
+using MVVMProject.Interfaces;
 
 namespace MVVMProject
 {
     public partial class App : Application
     {
-
         public App()
         {
             VersionTracking.Track();
-            DependencyService.Register<Interfaces.IMessageService, Services.MessageService>();
+            DependencyService.Register<IMessageService, MessageService>();
             InitializeComponent();
             MainPage = new AppShell();
         }
